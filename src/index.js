@@ -7,9 +7,11 @@ import { UserIsAuthenticated } from './util/wrappers.js'
 
 // Layouts
 import App from './App'
-import Home from './layouts/home/Home'
-import Dashboard from './layouts/dashboard/Dashboard'
-import Profile from './user/layouts/profile/Profile'
+import Top from './views/layouts/top/Top'
+import Search from './views/layouts/search/Search'
+import Mypage from './views/layouts/mypage/Mypage'
+import Recommend from './views/layouts/recommend/Recommend'
+import Matching from './views/layouts/matching/Matching'
 
 // Redux Store
 import store from './store'
@@ -20,12 +22,15 @@ ReactDOM.render((
     <Provider store={store}>
       <Router history={history}>
         <Route path="/" component={App}>
-          <IndexRoute component={Home} />
-          <Route path="dashboard" component={UserIsAuthenticated(Dashboard)} />
-          <Route path="profile" component={UserIsAuthenticated(Profile)} />
+          <IndexRoute component={Top} />
+          <Route path="search" component={UserIsAuthenticated(Search)} />
+          <Route path="mypage" component={UserIsAuthenticated(Mypage)} />
+          <Route path="recommend" component={UserIsAuthenticated(Recommend)} />
+          <Route path="Matching" component={UserIsAuthenticated(Matching)} />
         </Route>
       </Router>
     </Provider>
   ),
   document.getElementById('root')
+
 )
