@@ -1,68 +1,111 @@
-/* PAGE */
-
-body,
-.pure-g [class*=pure-u] {
-  font-family: 'Open Sans', sans-serif;
+/*TODO 後でコンポーネント単位に分ける*/
+html {
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3 {
-  font-family: 'Oswald', 'Arial Narrow', sans-serif;
-}
-
-pre {
-  display: block;
-  margin: 20px 0 15px 0;
-  padding: 10px;
-  background: #eee;
+/*Common Styles*/
+body {
+  width: 100%;
+  font-size: 16px;
+  background-color: #fcfaef !important;
 }
 
 .container {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 45px 20px;
+  margin-top: 40px;
+  font-family: Avenir;
 }
 
-.pure-button-primary {
-  background-color: #0c1a2b;
+a {
+  text-decoration: none !important;
 }
 
-.pure-button-primary:hover {
-  background-color: #233e5e;
+nav {
+  background-image: linear-gradient(45deg, #d3504a 0%, #a63636 100%);
 }
 
-.pure-form input[type="text"]:focus {
-  border-color: #0c1a2b;
-}
-
-/* NAVBAR */
-
-.navbar {
-  position: fixed;
-  padding: 5px;
-  background: #0c1a2b;
-  font-family: 'Oswald', 'Arial Narrow', sans-serif;
-}
-
-.navbar a {
+nav .logo {
+  padding: 2rem 1rem;
+  font-size: 2rem;
+  font-family: 'Nothing You Could Do', cursive;
   color: #fff;
 }
 
-.navbar a:active,
-.navbar a:focus,
-.navbar a:hover {
-  background: #233e5e;
-}
-
-.navbar .pure-menu-heading {
+/*Top Styles*/
+.top header {
+  position: fixed;
+  z-index: 1;
+  padding: 1.3rem 2rem 1rem 2rem;
+  font-family: 'Nothing You Could Do', cursive;
   font-weight: bold;
-  text-transform: none;
+  color: #fff;
 }
 
-.navbar .navbar-right {
-  float: right;
+.top header h1 {
+  font-size: 4rem;
 }
 
-.navbar .uport-logo {
-  height: 16px;
-  margin-right: 10px;
+.top .content {
+  position: relative;
+}
+
+.top  .content .service-description {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 15%;
+  font-family: 'Nothing You Could Do', cursive;
+  color: #fff;
+}
+
+.top  .content .service-description h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.top  .content .service-description p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*TopSlider Styles*/
+.top-slider {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.top-slider .slick-list {
+}
+
+.top-slider img {
+  margin: auto;
+}
+
+/*SimpleButton Styles*/
+.login-button-wrapper {
+  position: absolute;
+  top: 40%;
+  right: 22%;
+}
+.login-button-wrapper .login-button {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  background-color: #d3504a;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.098), 0px 1px 5px 0px rgba(0, 0, 0, 0.084);
+  border: solid 2px #fff;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+  font-size: 1.2rem;
+}
+
+.login-button-wrapper .login-button:hover {
+  background-color: #a63636;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.14), 0px 6px 10px 0px rgba(0, 0, 0, 0.098), 0px 1px 18px 0px rgba(0, 0, 0, 0.084);
+}
+
+.login-button-wrapper .login-button img {
+  width: 24px;
+  margin-right: .3rem;
+  vertical-align: middle;
 }
