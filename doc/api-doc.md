@@ -145,7 +145,7 @@ status code 400
 GET
  
 ### URL
-/api/user
+/api/user?user_id=1qwertyutrdfvbnjki87tghu654e
 
 ### response
 
