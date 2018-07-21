@@ -13,7 +13,7 @@ class Mypage extends Component {
       <main className="mypage">
         <Navbar></Navbar>
         <div className="container">
-          <h1>My page</h1>
+          <h2>My page</h2>
           <UserCard></UserCard>
         </div>
       </main>
