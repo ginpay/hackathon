@@ -16,18 +16,19 @@ class Recommend extends Component {
     authData = this.props
   }
 
-  //TODO:残高取得メソッド
-  getBalance (props) {
-      // return { balance: web3.eth.getBalance(this.props.authData.address) / 1e+18 };
-  }
-
   render() {
+
+    // const balance = () => {
+    //   console.log(this.props.authData.address)
+    //   return web3.eth.getBalance(this.props.authData.address) / 1e+18
+    // }
+
     return(
       <main className="matching">
         <Navbar></Navbar>
         <div className="container">
-          <h1>Wish list of travelers</h1>
-          {/** TODO:残高を表示 <h2>{balance} ETH</h2> **/}
+          <h2>Wish list of travelers</h2>
+          {/*<h2>{balance()} ETH</h2>*/}
           <Travelers></Travelers>
         </div>
       </main>

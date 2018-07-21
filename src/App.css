@@ -35,6 +35,20 @@ nav ul {
   font-family: Avenir;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #d3504a;
+  box-shadow: 0 1px 0 0 #d3504a;
+}
+
 /*Top Styles*/
 .top header {
   position: fixed;
@@ -45,15 +59,11 @@ nav ul {
   color: #fff;
 }
 
-.top header h1 {
-  font-size: 4rem;
-}
-
 .top .content {
   position: relative;
 }
 
-.top  .content .service-description {
+.top .content .service-description {
   position: absolute;
   z-index: 1;
   top: 20%;
@@ -62,14 +72,18 @@ nav ul {
   color: #fff;
 }
 
-.top  .content .service-description h2 {
+.top .content .service-description h2 {
   font-size: 3rem;
   font-weight: bold;
 }
 
-.top  .content .service-description p {
+.top .content .service-description p {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.top .content h2 {
+  font-family: 'Nothing You Could Do', cursive;
 }
 
 /*TopSlider Styles*/
@@ -126,11 +140,18 @@ nav ul {
 
 .destination-cards .destination-card .card-action .ginpay {
   display: inline-block;
-  padding-right: .5rem;
+  font-size: 1.2rem;
 }
 
 .destination-cards .destination-card .card-action .material-icons {
+  padding-right: .5rem;
   vertical-align: middle;
+}
+
+.destination-cards .destination-card .card-action .ginpay span {
+  padding-left: .5rem;
+  font-size: 1rem;
+  color: #e6b422;
 }
 
 .destination-card .card .card-image .btn-floating .material-icons {
@@ -153,18 +174,34 @@ nav ul {
   font-weight: bold;
 }
 
+/*Message Styles*/
 .message {
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   border-radius: 1rem;
   background-color: #e2e0a5;
   color: #000;
 }
 
+/*User card Styles*/
 .user-card {
   padding: 2rem;
   background-color: #fff;
 }
 
+.user-card label {
+  font-size: 2rem;
+}
+
+.user-card .ginpay {
+  font-size: 2rem;
+}
+
+.user-card .ginpay span {
+  padding-left: .5rem;
+  color: #e6b422;
+}
+
+/*Simple button Styles*/
 .simple-button {
   padding: .6rem 1.2rem;
   border-radius: 20px;
@@ -180,4 +217,77 @@ nav ul {
 .simple-button:hover {
   background-color: #a63636;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.14), 0px 6px 10px 0px rgba(0, 0, 0, 0.098), 0px 1px 18px 0px rgba(0, 0, 0, 0.084);
+}
+
+/*Traveler Styles*/
+.traveler {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.traveler .user-icon-wrapper {
+  flex: 2;
+}
+
+.traveler .message-wrapper {
+  flex: 10;
+  align-self: center;
+}
+
+/*Modal Styles*/
+.modal-title {
+  padding: 0 3rem;
+}
+
+/*Chat Styles*/
+.chats .chat-box {
+  padding: 4rem;
+  background-color: #fff;
+}
+
+.chats .chat-form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.chats .chat-form textarea {
+  flex: 11;
+  margin-top: 2rem;
+  background-color: #fff;
+}
+
+.chats .chat-form i {
+  flex: 1;
+}
+
+.my-chat {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.my-chat .user-icon-wrapper {
+  flex: 2;
+}
+
+.my-chat .message-wrapper {
+  flex: 10;
+  align-self: center;
+}
+
+.your-chat {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.your-chat .message-wrapper {
+  flex: 10;
+  align-self: center;
+}
+
+.your-chat .user-icon-wrapper {
+  flex: 2;
 }
