@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from "../../components/Navbar";
+import UserCard from "../../components/UserCard";
 
 class Mypage extends Component {
   constructor(props, { authData }) {
@@ -13,6 +14,7 @@ class Mypage extends Component {
         <Navbar></Navbar>
         <div className="container">
           <h1>My page</h1>
+          <UserCard></UserCard>
         </div>
       </main>
     )

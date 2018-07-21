@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from "../../components/Navbar";
+
 const Web3 = require('web3');
 var accessToken = ""; //infuraのアクセストークン設定
 const provider = new Web3.providers.HttpProvider(
@@ -7,6 +8,7 @@ const provider = new Web3.providers.HttpProvider(
   )
 const web3 = new Web3(provider);
 
+import Travelers from "../../components/Travelers";
 
 class Recommend extends Component {
   constructor(props, { authData }) {
@@ -26,6 +28,7 @@ class Recommend extends Component {
         <div className="container">
           <h1>Wish list of travelers</h1>
           {/** TODO:残高を表示 <h2>{balance} ETH</h2> **/}
+          <Travelers></Travelers>
         </div>
       </main>
     )

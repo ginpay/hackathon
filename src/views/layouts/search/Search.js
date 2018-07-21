@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from "../../components/Navbar";
+import DestinationCards from "../../components/DestinationCards";
 
 class Search extends Component {
   constructor(props, { authData }) {
@@ -13,6 +14,9 @@ class Search extends Component {
         <Navbar></Navbar>
         <div className="container">
           <h1>Find a destination</h1>
+          <div className="row">
+            <DestinationCards></DestinationCards>
+          </div>
         </div>
       </main>
     )
