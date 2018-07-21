@@ -17,14 +17,14 @@ status code 200
   [
     {
       'destination_id': 1,
-      'name': '三浦海岸納涼まつり花火大会',
+      'name': '北海道',
       'image': 's3 url',
       'point': '0.12',
       'description': '毎年、8月初旬に三浦市は三浦海岸納涼まつり花火大会を開催する。　夏の太陽が沈んだ後、3000発の花火が打ち上げられると夜空は輝きで彩られる。　夏祭りを満喫するのに欠かせないもの全てがここで楽しめる―太陽、砂浜、夜店の食べ物、綺麗な浴衣、そして花火。'
     },
     {
       'destination_id': 2,
-      'name': '三浦海岸納涼まつり花火大会',
+      'name': '青森',
       'image': 's3 url',
       'point': '0.12',
       'description': '毎年、8月初旬に三浦市は三浦海岸納涼まつり花火大会を開催する。　夏の太陽が沈んだ後、3000発の花火が打ち上げられると夜空は輝きで彩られる。　夏祭りを満喫するのに欠かせないもの全てがここで楽しめる―太陽、砂浜、夜店の食べ物、綺麗な浴衣、そして花火。'
@@ -101,11 +101,48 @@ status code 400
    ]
  }
  ```
+
+## ユーザー情報登録API
  
- ## ユーザー情報取得API
+### method
+POST
+
+### HEADERS
+Content-Type: application/json
+
+### URL
+/api/update-user
+
+### request body
+
+```
+{
+ 'user_id': '1qwertyutrdfvbnjki87tghu654e',
+ 'user_name': '山田太郎',
+ 'image': 'hoge',
+ 'point': '100.0'
+}
+```
+
+### response
+
+status code 200
+```
+{
+ 'status': 'success'
+}
+```
+status code 400
+```
+{
+  'error_code': 1
+}
+```  
  
- ### method
-  GET
+## ユーザー情報取得API
+ 
+### method
+GET
  
 ### URL
 /api/user
@@ -127,33 +164,33 @@ status code 200
   
  ## チャットメッセージAPI
  
- ### method
- POST
- 
- ### HEADERS
- Content-Type: application/json
- 
- ### URL
- /api/message
- 
- ### request body
- 
- ```
- {
-   'user_id': '1qwertyutrdfvbnjki87tghu654e',
-   'message': 'こんにちは'
- }
- ```
- 
- ### response
- 
- status code 200
- ```
- {
-   'status': 'success'
- }
- ```
- status code 400
+### method
+POST
+
+### HEADERS
+Content-Type: application/json
+
+### URL
+/api/message
+
+### request body
+
+```
+{
+  'user_id': '1qwertyutrdfvbnjki87tghu654e',
+  'message': 'こんにちは'
+}
+```
+
+### response
+
+status code 200
+```
+{
+  'status': 'success'
+}
+```
+status code 400
  ```
 {
 　　'error_code': 1
