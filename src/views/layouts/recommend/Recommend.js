@@ -1,10 +1,22 @@
 import React, { Component } from 'react'
 import Navbar from "../../components/Navbar";
+const Web3 = require('web3');
+var accessToken = ""; //infuraのアクセストークン設定
+const provider = new Web3.providers.HttpProvider(
+   "https://rinkeby.infura.io/" + accessToken
+  )
+const web3 = new Web3(provider);
+
 
 class Recommend extends Component {
   constructor(props, { authData }) {
     super(props)
     authData = this.props
+  }
+
+  //TODO:残高取得メソッド
+  getBalance (props) {
+      // return { balance: web3.eth.getBalance(this.props.authData.address) / 1e+18 };
   }
 
   render() {
@@ -13,6 +25,7 @@ class Recommend extends Component {
         <Navbar></Navbar>
         <div className="container">
           <h1>Wish list of travelers</h1>
+          {/** TODO:残高を表示 <h2>{balance} ETH</h2> **/}
         </div>
       </main>
     )
