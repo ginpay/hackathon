@@ -7,11 +7,11 @@ import { UserIsAuthenticated } from './util/wrappers.js'
 
 // Layouts
 import App from './App'
-import Top from './layouts/top/Top'
-import Search from './user/layouts/search/Search'
-import Mypage from './user/layouts/mypage/Mypage'
-import Recommend from './user/layouts/recommend/Recommend'
-import Matching from './user/layouts/matching/Matching'
+import Top from './views/layouts/top/Top'
+import Search from './views/layouts/search/Search'
+import Mypage from './views/layouts/mypage/Mypage'
+import Recommend from './views/layouts/recommend/Recommend'
+import Matching from './views/layouts/matching/Matching'
 
 // Redux Store
 import store from './store'

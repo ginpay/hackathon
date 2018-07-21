@@ -31,6 +31,10 @@ nav .logo {
   color: #fff;
 }
 
+nav ul {
+  font-family: Avenir;
+}
+
 /*Top Styles*/
 .top header {
   position: fixed;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Navbar from "../../ui/Navbar";
+import Navbar from "../../components/Navbar";
 
 class Recommend extends Component {
   constructor(props, { authData }) {

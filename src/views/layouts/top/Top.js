@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Slider from '../../user/ui/TopSlider'
-import LoginButtonContainer from '../../user/ui/loginbutton/LoginButtonContainer'
+import Slider from '../../components/TopSlider'
+import LoginButtonContainer from '../../components/loginbutton/LoginButtonContainer'
 
 class Top extends Component {
   render() {
