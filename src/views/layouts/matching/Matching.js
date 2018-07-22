@@ -13,7 +13,7 @@ class Matching extends Component {
       <main className="matching">
         <Navbar></Navbar>
         <div className="container">
-          <h2>Matching</h2>
+          <h2>Chat</h2>
           <Chats></Chats>
         </div>
       </main>

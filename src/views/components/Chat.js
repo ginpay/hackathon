@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import UserIcon from "../components/UserIcon";
 import Message from "../components/Message";
+import userIcon from '../../img/user-icon.jpg'
+import recommenderIcon from '../../img/recommender.jpg'
 
 class Chat extends Component {
 
@@ -9,20 +11,20 @@ class Chat extends Component {
     const myChat =
       <div className="my-chat row">
         <div className="user-icon-wrapper">
-          <UserIcon></UserIcon>
+          <UserIcon icon={userIcon}></UserIcon>
         </div>
         <div className="message-wrapper">
-          <Message></Message>
+          <Message message={this.props.message}></Message>
         </div>
       </div>
 
     const yourChat =
       <div className="your-chat row">
         <div className="message-wrapper">
-          <Message></Message>
+          <Message message={this.props.message}></Message>
         </div>
         <div className="user-icon-wrapper">
-          <UserIcon></UserIcon>
+          <UserIcon icon={recommenderIcon}></UserIcon>
         </div>
       </div>
 

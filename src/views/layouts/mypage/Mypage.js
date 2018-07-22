@@ -14,7 +14,7 @@ class Mypage extends Component {
         <Navbar></Navbar>
         <div className="container">
           <h2>My page</h2>
-          <UserCard></UserCard>
+          <UserCard authData={this.props.authData}></UserCard>
         </div>
       </main>
     )

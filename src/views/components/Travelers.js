@@ -21,9 +21,9 @@ class Travelers extends Component {
 
     return (
       <div className="travelers">
-        {/*{this.state.destinations.map((data) => {*/}
-          {/*return <Traveler key={data.id} destination={data}></Traveler>;*/}
-        {/*})}*/}
+        {this.state.requests.map((data) => {
+          return <Traveler key={data.id} traveler={data}></Traveler>;
+        })}
       </div>
     );
   }

@@ -3,25 +3,11 @@ import Chat from "../components/Chat";
 import SimpleButton from "../components/SimpleButton";
 import {Input, Icon, Row} from 'react-materialize'
 import axios from 'axios';
-import api from '../../../config/api'
 // import {ginpay} from '../../util/ginpay'
 
 class Chats extends Component {
-
-  state = {
-    chats: []
-  }
-
-  componentDidMount() {
-    axios.get(`${api.API_ORIGIN}chats`)
-      .then(res => {
-        const chats = res.data;
-        this.setState({ chats });
-      })
-  }
-
-  isMyMessage(userId){
-    return this.props.authData.id == userId
+  constructor(props) {
+    super(props);
   }
 
   render() {
@@ -29,13 +15,24 @@ class Chats extends Component {
     return (
       <div className="chats">
         <div className="chat-box">
-          {/*<Chat isMyMessage={this.isMyMessage(data.user_id)}></Chat>*/}
+          <Chat isMyMessage={false} message="I will introduce some tourist spots according to your wishes!"></Chat>
+          <Chat isMyMessage={true} message="Thank you! I will try it as a reference!"></Chat>
+          <Chat isMyMessage={false} message="Goryokaku of Hokkaido is a nice place!"></Chat>
+          <Chat isMyMessage={true} message="Thank you I'm going to Goryokaku!"></Chat>
+          <Chat isMyMessage={false} message="Have fun!"></Chat>
+          <Chat isMyMessage={true} message="Thank you!"></Chat>
         </div>
         <div className="chat-form row">
-          <Input type='textarea' />
-          <Icon>send</Icon>
+          <div className="col s12 m12 l12">
+            <textarea className="materialize-textarea"></textarea>
+          </div>
         </div>
-        <SimpleButton label="Reward"></SimpleButton>
+        <div className="row right-align">
+          <SimpleButton label="Send message"></SimpleButton>
+        </div>
+        <div className="row right-align">
+          <SimpleButton label="Reward"></SimpleButton>
+        </div>
       </div>
     );
   }
