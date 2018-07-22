@@ -22,7 +22,11 @@ class DestinationCard extends Component {
   };
 
   sliceDescription(description) {
-    return `${description.substr(0, 10)}...`
+    if(description){
+      return `${description.substr(0, 10)}...`
+    }else{
+      return ''
+    }
   }
 
   render() {
