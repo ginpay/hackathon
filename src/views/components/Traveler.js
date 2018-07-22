@@ -7,10 +7,10 @@ class Traveler extends Component {
 
     return (
       <div className="traveler row">
-        <div className="col s2 m2 l2">
+        <div className="user-icon-wrapper">
           <UserIcon></UserIcon>
         </div>
-        <div className="col s10 m10 l10">
+        <div className="message-wrapper">
           <Message></Message>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from "../../components/Navbar";
-import UserIcon from "../../components/UserIcon";
-import Message from "../../components/Message";
+import Chats from "../../components/Chats";
 
 class Matching extends Component {
   constructor(props, { authData }) {
@@ -15,14 +14,7 @@ class Matching extends Component {
         <Navbar></Navbar>
         <div className="container">
           <h2>Matching</h2>
-          <div className="traveler row">
-            <div className="col s2 m2 l2">
-              <UserIcon></UserIcon>
-            </div>
-            <div className="col s10 m10 l10">
-              <Message></Message>
-            </div>
-          </div>
+          <Chats></Chats>
         </div>
       </main>
     )
