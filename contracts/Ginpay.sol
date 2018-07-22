@@ -150,11 +150,6 @@ contract AccountLevelsTest is AccountLevels {
 
 contract GinPay is SafeMath {
   address public admin; //the admin address
-  // address public feeAccount; //the account that will receive fees
-  // address public accountLevelsAddr; //the address of the AccountLevels contract
-  // uint public feeMake; //percentage times (1 ether)
-  // uint public feeTake; //percentage times (1 ether)
-  // uint public feeRebate; //percentage times (1 ether)
   mapping (address => mapping (address => uint)) public tokens; //mapping of token addresses to mapping of account balances (token=0 means Ether)
   // mapping (address => mapping (bytes32 => bool)) public orders; //mapping of user accounts to mapping of order hashes to booleans (true = submitted by user, equivalent to offchain signature)
   mapping (address => mapping (bytes32 => bool)) public orders; //mapping of user accounts to mapping of order hashes to booleans (true = submitted by user, equivalent to offchain signature)
@@ -170,14 +165,8 @@ contract GinPay is SafeMath {
   // token address , userのアドレス, 
   event Deposit(address token, address user, uint amount, uint balance);
 
-  // function GinPay(address admin_, uint feeMake_, uint feeTake_, uint feeRebate_) {
   function GinPay(address admin_) {
     admin = admin_;
-    // feeAccount = feeAccount_;
-    // accountLevelsAddr = accountLevelsAddr_;
-    // feeMake = feeMake_;
-    // feeTake = feeTake_;
-    // feeRebate = feeRebate_;
   }
 
   function() {
@@ -198,46 +187,24 @@ contract GinPay is SafeMath {
     return tokens[token][user];
   }
 
-  //TODO:reccomend sightseeing
+  //record recommend travel
   function recommend(address traveler, address recommender, uint256 place) {
     Recommend(traveler, recommender, place);
   }
 
-  // function (address traveler, address recommender, uint256 place) {
-  //   Recommend(address traveler, address recommender,uint256 place);
-  // }
+  // record travel proof
+  function proofOfVisit(address traveler, address recommender, uint256 place, uint256 proof) {
+    ProofOfVisit(traveler, recommender, place, proof);
+  }
 
-  // Future
-  // function withdraw(uint amount) {
-  //   if (tokens[0][msg.sender] < amount) throw;
-  //   tokens[0][msg.sender] = safeSub(tokens[0][msg.sender], amount);
-  //   if (!msg.sender.call.value(amount)()) throw;
-  //   Withdraw(0, msg.sender, amount, tokens[0][msg.sender]);
-  // }
-
-  // function depositToken(address token, uint amount) {
-  //   //remember to call Token(address).approve(this, amount) or this contract will not be able to do the transfer on your behalf.
-  //   if (token==0) throw;
-  //   if (!Token(token).transferFrom(msg.sender, this, amount)) throw;
-  //   tokens[token][msg.sender] = safeAdd(tokens[token][msg.sender], amount);
-  //   Deposit(token, msg.sender, amount, tokens[token][msg.sender]);
-  // }
-
-  // function withdrawToken(address token, uint amount) {
-  //   if (token==0) throw;
-  //   if (tokens[token][msg.sender] < amount) throw;
-  //   tokens[token][msg.sender] = safeSub(tokens[token][msg.sender], amount);
-  //   if (!Token(token).transfer(msg.sender, amount)) throw;
-  //   Withdraw(token, msg.sender, amount, tokens[token][msg.sender]);
-  // }
-
-  // //取引可能かをテスト
-  // function testTrade(address tokenGet, uint amountGet, address tokenGive, uint amountGive, uint expires, uint nonce, address user, uint8 v, bytes32 r, bytes32 s, uint amount, address sender) constant returns(bool) {
-  //   if (!(
-  //     tokens[tokenGet][sender] >= amount &&
-  //     availableVolume(tokenGet, amountGet, tokenGive, amountGive, expires, nonce, user, v, r, s) >= amount
-  //   )) return false;
-  //   return true;
-  // }
+  // TODO:modifier onlyowner
+  function reward(address traveler, address recommender, uint travelerReward, uint recommenderReward) {
+    if (msg.sender != admin) throw;
+    //send reward to traveler
+    if (!traveler.call.value(travelerReward)()) throw;
+    //send reward to recommender
+    if (!recommender.call.value(recommenderReward)()) throw;
+    Reward(traveler, recommender, travelerReward, recommenderReward);
+  }
 
 }
