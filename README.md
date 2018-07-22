@@ -7,7 +7,7 @@
 git clone <this repository>
 cd test
 ```
-#### account information
+#### default account information
 
 
 ```
@@ -21,7 +21,7 @@ fromAccount = "0x142a15c56308269c98B3da7a65285c729dd9266e";
 toAccount = "0x893b83A643d43395D064C04170d82b8E71E9694e";
 ```
 
-#### set your priv key,change fromAccount and infura acccestoken
+#### set your priv key,change fromAccount and infura accesstoken
 
 ```
 // var accessToken = '';// Set your accessToken
