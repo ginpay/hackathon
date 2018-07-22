@@ -11,6 +11,7 @@ const web3 = new Web3(provider);
 import Travelers from "../../components/Travelers";
 
 class Recommend extends Component {
+
   constructor(props, { authData }) {
     super(props)
     authData = this.props
