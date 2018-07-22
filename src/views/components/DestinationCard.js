@@ -41,7 +41,7 @@ class DestinationCard extends Component {
             <a onClick={this.onOpenModal} className="btn-floating halfway-fab waves-effect waves-light scale-transition"><Icon>search</Icon></a>
           </div>
           <Modal open={open} onClose={this.onCloseModal} center>
-            <h2 className="modal-title">Pick up the destination</h2>
+            <h2 className="modal-title">Send Request</h2>
             <p>{this.props.destination.description}</p>
             <label>Request description</label>
             <Input type='textarea' />
