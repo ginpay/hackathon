@@ -19,17 +19,16 @@ class Recommend extends Component {
 
   render() {
 
-    // const balance = () => {
-    //   console.log(this.props.authData)
-    //   return web3.eth.getBalance(this.props.authData.address) / 1e+18
-    // }
+    const balance = () => {
+      return web3.eth.getBalance('0x63b73b907b41c0cf24bbde16f21a5bca6ceff3f3') / 1e+18
+    }
 
     return(
       <main className="matching">
         <Navbar></Navbar>
         <div className="container">
           <h2>Wish list of travelers</h2>
-          {/*<h2>{balance()} ETH</h2>*/}
+          <h2>{balance()} ginpay</h2>
           <Travelers></Travelers>
         </div>
       </main>
