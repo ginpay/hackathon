@@ -10,7 +10,7 @@ const HDWalletProvider = require('truffle-hdwallet-provider');
 const solc = require('solc');
 var Tx = require('ethereumjs-tx');
 var accessToken = '';// Set your accessToken
-const privStr = ''; // TODO: set your priv key
+const privStr = ''; // Set your priv key
 const provider = new Web3.providers.HttpProvider(
    "https://rinkeby.infura.io/" + accessToken
   )
@@ -92,11 +92,24 @@ var travelerAccount = "0x63b73b907b41c0cf24bbde16f21a5bca6ceff3f3";
 //recommender
 var toAccount = "0x893b83A643d43395D064C04170d82b8E71E9694e";
 
-execReward(fromAccount, contractAccount, 0, travelerAccount, toAccount, 1e+15, 1e+15)
+console.log(process.argv[2]);
+
+if(process.argv[2] === "deposit"){
+  execDepositEth(fromAccount, contractAccount, 1e+17);
+}else if(process.argv[2] === "reward"){
+  execReward(fromAccount, contractAccount, 0, travelerAccount, toAccount, 2e+16, 8e+16)
+}else{
+  console.log("command:deposit or reward");
+}
+
+
 
 var travelerBalance = web3.eth.getBalance(fromAccount) / 1e+18
 console.log("traveler account");
 console.log(travelerBalance.toString(10));
 var recommenderBalance = web3.eth.getBalance(toAccount) / 1e+18
 console.log("recommender account");
+
+
+
 console.log(recommenderBalance.toString(10));
