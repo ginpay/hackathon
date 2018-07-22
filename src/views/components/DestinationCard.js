@@ -46,7 +46,7 @@ class DestinationCard extends Component {
             <label>Request description</label>
             <Input type='textarea' />
             <div className="right-align">
-              <SimpleButton label="Send request"></SimpleButton>
+              <SimpleButton onClick={this.onCloseModal()} label="Send request"></SimpleButton>
             </div>
           </Modal>
           <div className="card-content">

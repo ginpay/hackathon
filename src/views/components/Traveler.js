@@ -9,7 +9,7 @@ class Traveler extends Component {
     return (
       <div className="traveler row">
         <div className="user-icon-wrapper">
-          <UserIcon icon={userIcon}></UserIcon>
+          <UserIcon icon={this.props.userIcon}></UserIcon>
         </div>
         <div className="message-wrapper">
           <Message message={this.props.traveler.message}></Message>
