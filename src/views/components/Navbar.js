@@ -16,10 +16,10 @@ class Navbar extends Component {
           <Link to="/mypage">Mypage</Link>
         </li>
         <li>
-          <Link to="/recommend">Recommend</Link>
+          <Link to="/recommend">Wish list</Link>
         </li>
         <li>
-          <Link to="/matching">Matching</Link>
+          <Link to="/matching">Chat</Link>
         </li>
         <LogoutButtonContainer />
       </ul>

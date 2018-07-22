@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import UserIcon from "../components/UserIcon";
 import Message from "../components/Message";
+import userIcon from '../../img/user-icon.jpg'
 
 class Traveler extends Component {
   render() {
@@ -8,10 +9,10 @@ class Traveler extends Component {
     return (
       <div className="traveler row">
         <div className="user-icon-wrapper">
-          <UserIcon></UserIcon>
+          <UserIcon icon={userIcon}></UserIcon>
         </div>
         <div className="message-wrapper">
-          <Message></Message>
+          <Message message={this.props.traveler.message}></Message>
         </div>
       </div>
     );

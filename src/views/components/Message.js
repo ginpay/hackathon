@@ -5,7 +5,7 @@ class Message extends Component {
 
     return (
       <div className="message z-depth-1">
-        Message
+        {this.props.message}
       </div>
     );
   }

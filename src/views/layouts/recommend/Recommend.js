@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 const Web3 = require('web3');
 var accessToken = ""; //infuraのアクセストークン設定
 const provider = new Web3.providers.HttpProvider(
-   "https://rinkeby.infura.io/" + accessToken
+   "https://rinkeby.infura.io/" + 'kuNyJnh8ioOWvViwNx26'
   )
 const web3 = new Web3(provider);
 
@@ -20,7 +20,7 @@ class Recommend extends Component {
   render() {
 
     // const balance = () => {
-    //   console.log(this.props.authData.address)
+    //   console.log(this.props.authData)
     //   return web3.eth.getBalance(this.props.authData.address) / 1e+18
     // }
 
