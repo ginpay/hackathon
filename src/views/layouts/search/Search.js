@@ -13,7 +13,7 @@ class Search extends Component {
       <main className="search">
         <Navbar></Navbar>
         <div className="container">
-          <h2>Find a destination</h2>
+          <h2>Destinations</h2>
           <div className="row">
             <DestinationCards></DestinationCards>
           </div>

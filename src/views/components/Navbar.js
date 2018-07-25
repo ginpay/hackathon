@@ -10,13 +10,13 @@ class Navbar extends Component {
     const OnlyAuthLinks = VisibleOnlyAuth(() =>
       <ul className="right hide-on-med-and-down">
         <li>
-          <Link to="/search">Search</Link>
+          <Link to="/search">Destinations</Link>
         </li>
         <li>
-          <Link to="/mypage">Mypage</Link>
+          <Link to="/mypage">MyPage</Link>
         </li>
         <li>
-          <Link to="/recommend">Wish list</Link>
+          <Link to="/recommend">WishList</Link>
         </li>
         <li>
           <Link to="/matching">Chat</Link>
