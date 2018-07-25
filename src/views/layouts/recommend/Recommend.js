@@ -28,7 +28,7 @@ class Recommend extends Component {
         <Navbar></Navbar>
         <div className="container">
           <h2>Wish list of travelers</h2>
-          <h2>{balance()} ginpay</h2>
+          <h2><label>balance</label>{balance()} ginpay</h2>
           <Travelers></Travelers>
         </div>
       </main>
