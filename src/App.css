@@ -291,3 +291,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
 .your-chat .user-icon-wrapper {
   flex: 2;
 }
+
+.matching h2 label {
+  padding-right: .5rem;
+  font-size: 1.2rem;
+}
